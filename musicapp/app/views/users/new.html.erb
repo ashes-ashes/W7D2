@@ -1,0 +1,17 @@
+<div id="signblock">
+<h2>• sign up •</h2>
+<div>
+<form action="<%=users_url%>" method="POST">
+<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+    <label>email:
+    <input type="email" name="user[email]">
+    </label>
+    <br><br>
+    <label>password:
+    <input type="password" name="user[password]">
+    </label>
+    <br><br><br>
+    <input type="submit" value="sign me up">
+</form>
+</div>
+</div>

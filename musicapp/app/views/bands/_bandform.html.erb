@@ -1,0 +1,14 @@
+<div id="signblock">
+<%if !band.name %>
+<h2>• submit a new band •</h2>
+<%else%>
+<h2>• edit this band •</h2>
+<%end%>
+    <form action="<%=bands_url%>" method="POST">
+    <%if band.name %>
+    <input type="hidden" name="_method" value="PATCH">
+    <%end%>
+    <input type="text" name="band[name]" value="<%=band[:name]%>">
+    <input type="submit" value="i'm done">
+    </form>
+</div>

@@ -1,0 +1,12 @@
+<div id="login_area">
+<div id="greeting">hello, <%=current_user ? current_user.email : "guest"%></div>
+<%if current_user%>
+    <form action="<%=session_url%>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="log out">
+    </form>
+<%else%>
+    <a href="<%=new_session_url%>">log in</a>
+    <a href="<%=new_user_url%>">sign up</a>
+<%end%>
+</div>
